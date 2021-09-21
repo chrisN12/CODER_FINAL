@@ -1,0 +1,37 @@
+@import "variables";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+html {
+    font-size: 62.5%;
+}
+
+/* BACKGROUND COLOR */
+
+.container {
+    background-color: #2c2b2f;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%239C92AC' fill-opacity='0.24' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+}
+
+.header {
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    .header__logo {
+        width: 100px;
+        height: 100%;
+    }
+    .header__title {
+        align-items: center;
+        padding-left: 10px;
+        font-size: 4.5rem;
+    }
+}
+.navbar {
+    font-size: 2rem;
+}
