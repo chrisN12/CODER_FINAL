@@ -384,3 +384,143 @@ background: linear-gradient(142deg, rgba(255,255,255,1) 60%, rgba(255,255,255,1)
         height: auto;
     }
 }
+
+/* SERVERS  */
+.servers {
+    text-align: center;
+    h2 {
+        padding: 1px;
+        background: beige;
+        margin-top: 15px;
+    }
+    img {
+        padding: 10px;
+    }
+    .servers__listas {
+        display: grid;
+        gap: 10px;
+        grid-template-columns: repeat(auto-fit, 1fr);
+        padding-top: 20px; 
+    }
+    .servers__listas--info {
+        border: 1px solid black;
+        border-radius: 10px;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .servers__listas--none {
+        list-style: none;
+    } // CLASES PARA SACARLE PUNTO A LAS LISTAS //
+}
+.servers__caracteristicas--info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+.mapas__fotos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 1fr);
+    .mapas__fotos--info {
+        border: 1px solid black;
+    }
+}
+.mapas__titulo {
+    text-align: center;
+    padding: 1px;
+    background: beige;
+    margin-top: 15px;
+}
+
+/* COLORES PARA CUADROS DE SERVER */
+#servers__listas--color1 {  
+    background: rgb(255,255,255);
+background: linear-gradient(153deg, rgba(255,255,255,1) 46%, rgba(0,31,255,1) 100%, rgba(255,255,255,1) 100%);
+}
+#servers__listas--color2 {
+    background: rgb(255,255,255);
+background: linear-gradient(153deg, rgba(255,255,255,1) 46%, rgba(18,255,0,1) 100%, rgba(255,255,255,1) 100%);;
+}
+#servers__listas--color3 {
+    background: rgb(255,255,255);
+    background: linear-gradient(153deg, rgba(255,255,255,1) 46%, rgba(255,0,0,1) 100%, rgba(255,255,255,1) 100%);
+}
+#servers__listas--color4 {
+    background: rgb(255,255,255);
+    background: linear-gradient(153deg, rgba(255,255,255,1) 46%, rgba(255,201,0,1) 100%, rgba(255,255,255,1) 100%);
+}
+
+/* RESPOSIVE LISTAS SERVERS */
+
+@media all and (min-width: 769px) {
+    .servers__listas {
+        display: grid;
+        gap: 10px;
+        grid-template-columns: repeat(3, 1fr);
+        padding-top: 20px; 
+    }
+}
+@media all and (min-width: 992px) {
+    .servers__listas {
+        display: grid;
+        gap: 10px;
+        grid-template-columns: repeat(4, 1fr);
+        padding-top: 20px; 
+    }
+}
+@media all and (min-width: 769px) {
+    .mapas__fotos {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        gap: 1px;
+    }
+    .mapas__fotos--info {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media all and (max-width: 768px) {
+    .servers__caracteristicas--info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+    }
+.servers__caracteristicas--info img {
+        width: 10px;
+        height: auto;
+    }
+    .mapas__fotos {
+        width: 200px;
+        height: 100%;
+        flex-direction: column;
+    }
+    .mapas__fotos--info {
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+// PARTE DE PRECIOS //
+
+@media all and (min-width: 769px){
+    #precios {
+        display: flex;
+        justify-content: center;
+        padding-top: 30px;
+        gap: 10px;
+    }
+    
+}
+
+.card {
+    background: rgb(255,255,255);
+background: linear-gradient(142deg, rgba(255,255,255,1) 90%, rgba(255,0,0,1) 100%);;
+}
