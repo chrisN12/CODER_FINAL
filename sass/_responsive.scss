@@ -1,0 +1,33 @@
+/* NOTICIAS INFO */
+
+@media (max-width: 950px) {
+    .noticias__info {
+    grid-template-columns: repeat(2,1fr);   
+    }
+}
+@media (max-width: 600px) {
+    .noticias__info {
+    grid-template-columns: repeat(1,1fr);   
+    }
+}
+
+/* LOGO Y HEADER RESPONSIVE */
+
+@media (max-width: 350px){
+    .header {
+        display: flex;
+        padding: 10px;
+        justify-content: center;
+        align-items: center;
+        .header__logo {
+            width: 80px;
+            height: 100%;
+        }
+        .header__title {
+            align-items: center;
+            padding-left: 10px;
+            font-size: 2rem;
+            color: black;
+        }
+    }
+}

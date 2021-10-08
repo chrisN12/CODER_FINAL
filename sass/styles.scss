@@ -1,6 +1,4 @@
-@import "variables";
-@import "responsive";
-
+@import 'responsive';
 * {
     margin: 0;
     padding: 0;
@@ -14,7 +12,7 @@ html {
 /* BACKGROUND COLOR */
 
 body {
-    background-color: #2c2b2f;
+    /* background-color: #2c2b2f; */
 background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%239C92AC' fill-opacity='0.24' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
 }
 
@@ -33,9 +31,13 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
         align-items: center;
         padding-left: 10px;
         font-size: 4.5rem;
-        color: white;
+        color: black;
+        font-weight: bold;
     }
 }
+
+
+
 .navbar {
     font-size: 2rem;
 }
@@ -55,11 +57,330 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 .noticias__info {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    color: white;
+    color: black;
     gap: 10px;
     padding-top: 10px;
+    font-size: 1.5rem;
+    padding-bottom: 10px;
     img {
         width: 100%;
         height: 200px;
+    }
+    h3 {
+        font-size: 2rem;
+        font-weight: bold;
+    }
+    .noticias__info--content a {
+        border: 0;
+        border: 1px solid black;
+        padding: 10px 10px;
+        color: black;
+        display: inline-block;
+        cursor: pointer;
+        background: white;
+    }
+}
+
+/* PODCAST */
+#podcast {
+    background-image: linear-gradient(to bottom, white, rgba(0, 174, 255, 0.493));
+    text-align: center;
+    padding-top: 30px;
+    h2 {
+        padding: 10px;
+        font-size: 3rem;
+    }
+    iframe {
+        padding: 20px;
+    }
+}
+
+/* SECTION INDEX NOSOTROS */
+
+.nosotros__texto {
+    h3 {
+        grid-area: titulo;
+        font-size: 3rem;
+    }
+    p {
+        grid-area: texto;
+        font-size: 1.5rem;
+    }
+    .nosotros__texto--fotoStraka {
+        grid-area: foto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+#Nosotros {
+    text-align: center;
+}
+.nosotros {
+    background: white;
+}
+
+/* SOBRE NOSOTROS  */
+@media all and (max-width: 768px) {
+    .nosotros {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+@media all and (min-width: 769px) {
+    .nosotros__texto {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas: 
+    "titulo foto"
+    "texto foto";
+    }
+}
+
+/* NOTICIAS INFO */
+
+@media (max-width: 950px) {
+    .noticias__info {
+    grid-template-columns: repeat(2,1fr);   
+    }
+}
+@media (max-width: 600px) {
+    .noticias__info {
+    grid-template-columns: repeat(1,1fr);   
+    }
+}
+
+/* LOGO Y HEADER RESPONSIVE */
+
+@media (max-width: 350px){
+    .header {
+        display: flex;
+        padding: 10px;
+        justify-content: center;
+        align-items: center;
+        .header__logo {
+            width: 80px;
+            height: 100%;
+        }
+        .header__title {
+            align-items: center;
+            padding-left: 10px;
+            font-size: 2rem;
+            color: black;
+        }
+    }
+}
+
+/* FOOTER */
+footer {
+    background-image: linear-gradient(to top, grey, white);
+    .footer__redes {
+        text-align: right;
+    }
+}
+
+@media all and (max-width: 768px) {
+    .footer__redes {
+        width: 100px;
+        height: auto;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
+}
+
+/* CONTACTO */
+
+#contacto {
+    background-image: url(../imagenes/argentinabanderacsgo.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.contacto__formulario {
+    border-color: black;
+    border-style: solid;
+    border-width: 4px;
+    width: 400px;
+    height: auto;
+    margin: auto;
+    background-color: rgba(250, 235, 215, 0.856);
+    text-align: center;
+    font-size: 15px;
+}
+
+/* SECCION DE SKINS */
+.main__skins {
+    display: grid;
+    gap: 5px;
+}
+
+.main_skins--armas {
+    /* height: 300px; */
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+    /* img {
+        width: 100%;
+        height: 100%;
+    } */
+
+/* SECCION CUCHILLOS */
+.section__cuchillo {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "tituloCuchillos tituloCuchillos"
+    "cuchilloImagen infoCuchillos"
+    "cuchilloimagen1 infoCuchillos1"
+    "fotosCuchillos2 infoCuchillos2"
+    "fotoCuchillos3 infoCuchillos3";
+}
+.section__cuchillo--titulo {
+    grid-area: tituloCuchillos;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.section__cuchillo--foto1 {
+    grid-area: cuchilloImagen;
+    
+}
+.section__cuchillo--info1 {
+    grid-area: infoCuchillos;
+    
+}
+.section__cuchillo--foto2 {
+    grid-area: cuchilloimagen1;
+   
+}
+.section__cuchillo--info2 {
+    grid-area: infoCuchillos1;
+}
+.section__cuchillo--foto3 {
+    grid-area: fotosCuchillos2;
+}
+.section__cuchillo--info3 {
+    grid-area: infoCuchillos2;
+}
+.section__cuchillo--foto4 {
+    grid-area: fotoCuchillos3;
+}
+.section__cuchillo--info4 {
+    grid-area: infoCuchillos3;
+}
+
+/* POSICIONAMIENTO FOTOS Y TEXTO */
+.section__cuchillo--foto1, .section__cuchillo--foto2, .section__cuchillo--foto3, .section__cuchillo--foto4 {
+    display: flex;
+    justify-content: flex-end;
+}
+.section__cuchillo--info1, .section__cuchillo--info2, .section__cuchillo--info3, .section__cuchillo--info4 {
+    display: flex;
+    align-items: center; 
+}
+
+/* ZOOM A CUCHILLOS */
+
+.section__cuchillo img {
+    transition: all 0.5s linear;
+}
+.section__cuchillo img:hover {
+    transform: scale(1.2);
+}
+
+.section__cuchillo {
+    background-image: linear-gradient(to left, rgba(28, 228, 255, 0.582), white);
+}
+
+/* SKINS */
+
+@media all and (max-width: 768px) {
+    .main__skins {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(12, 1fr);
+    }
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+@media all and (min-width: 769px) {
+    .main__skins {
+        grid-template-columns: repeat(3, 1fr);
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+@media all and (max-width: 768px) {
+    .footer__redes {
+        width: 100px;
+        height: auto;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
+}
+
+/* PARTIDAS */
+#partidas {
+    background: rgb(255,255,255);
+background: linear-gradient(142deg, rgba(255,255,255,1) 60%, rgba(255,255,255,1) 72%, rgba(0,0,0,1) 100%);
+}
+.partidas__titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: beige;
+    padding: 10px;
+    margin-top: 10px;
+}
+.partidas__contenido {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: stretch;
+    justify-content: space-evenly;
+    align-items: center;
+    /* border: 1px solid black; */
+    gap: 10px;
+}
+.partidas__contenido--9zCoscu {
+    padding-top: 20px;
+}
+.partidas__contenido img {
+        padding-bottom: 40px;
+        padding-left: 30px;
+}
+.partidas {
+    padding-left: 10px;
+    padding-top: 10px;
+    display: block;
+    text-align: center;
+}
+/* RESPONSIVE PARA PARTIDAS */
+
+@media all and (max-width: 768px) {
+    .partidas__contenido {
+    display: grid;    
+    }
+    .partidas__contenido--logo9z {
+        width: auto;
+        height: auto;
+    }
+    .partidas__contenido--mvp1 {
+        display: none;
+    }
+    iframe {
+        width: 300px;
+        height: auto;
     }
 }
