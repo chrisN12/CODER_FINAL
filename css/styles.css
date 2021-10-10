@@ -335,6 +335,14 @@ footer .footer__redes {
       grid-template-areas: "tituloCuchillos tituloCuchillos" "cuchilloImagen infoCuchillos" "cuchilloimagen1 infoCuchillos1" "fotosCuchillos2 infoCuchillos2" "fotoCuchillos3 infoCuchillos3";
 }
 
+.section__cuchillo h3 {
+  font-size: 3rem;
+}
+
+.section__cuchillo p {
+  font-size: 1.3rem;
+}
+
 .section__cuchillo--titulo {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
@@ -519,6 +527,7 @@ footer .footer__redes {
           align-items: center;
   /* border: 1px solid black; */
   gap: 10px;
+  font-size: 3rem;
 }
 
 .partidas__contenido--9zCoscu {
@@ -565,6 +574,7 @@ footer .footer__redes {
   padding: 1px;
   background: beige;
   margin-top: 15px;
+  font-size: 3rem;
 }
 
 .servers img {
@@ -578,6 +588,7 @@ footer .footer__redes {
   -ms-grid-columns: (1fr)[auto-fit];
       grid-template-columns: repeat(auto-fit, 1fr);
   padding-top: 20px;
+  font-size: 1.5rem;
 }
 
 .servers .servers__listas--info {
@@ -610,6 +621,7 @@ footer .footer__redes {
       -ms-flex-align: center;
           align-items: center;
   gap: 5px;
+  font-size: 1.5rem;
 }
 
 .mapas__fotos {
@@ -736,6 +748,10 @@ footer .footer__redes {
         -ms-flex-align: center;
             align-items: center;
   }
+}
+
+#precios {
+  font-size: 1.5rem;
 }
 
 @media all and (min-width: 769px) {

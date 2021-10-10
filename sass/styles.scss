@@ -230,6 +230,12 @@ footer {
 
 /* SECCION CUCHILLOS */
 .section__cuchillo {
+    h3 {
+        font-size: 3rem;
+    }
+    p {
+        font-size: 1.3rem;
+    }
     display: grid;
     grid-template-columns: repeat(2, 2fr);
     grid-template-rows: auto;
@@ -352,6 +358,7 @@ background: linear-gradient(142deg, rgba(255,255,255,1) 60%, rgba(255,255,255,1)
     align-items: center;
     /* border: 1px solid black; */
     gap: 10px;
+    font-size: 3rem;
 }
 .partidas__contenido--9zCoscu {
     padding-top: 20px;
@@ -392,6 +399,7 @@ background: linear-gradient(142deg, rgba(255,255,255,1) 60%, rgba(255,255,255,1)
         padding: 1px;
         background: beige;
         margin-top: 15px;
+        font-size: 3rem;
     }
     img {
         padding: 10px;
@@ -401,6 +409,7 @@ background: linear-gradient(142deg, rgba(255,255,255,1) 60%, rgba(255,255,255,1)
         gap: 10px;
         grid-template-columns: repeat(auto-fit, 1fr);
         padding-top: 20px; 
+        font-size: 1.5rem;
     }
     .servers__listas--info {
         border: 1px solid black;
@@ -419,6 +428,7 @@ background: linear-gradient(142deg, rgba(255,255,255,1) 60%, rgba(255,255,255,1)
     justify-content: center;
     align-items: center;
     gap: 5px;
+    font-size: 1.5rem;
 }
 .mapas__fotos {
     display: grid;
@@ -510,6 +520,9 @@ background: linear-gradient(153deg, rgba(255,255,255,1) 46%, rgba(18,255,0,1) 10
 
 // PARTE DE PRECIOS //
 
+#precios {
+    font-size: 1.5rem;
+}
 @media all and (min-width: 769px){
     #precios {
         display: flex;
